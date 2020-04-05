@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+    <title>列印頁</title>
+</head>
+
+<body>
+    <div id='app'>
+        <div class='box'>列印日期：XXXXXXX</div>
+        <div class='box'>報表方式：XXXXXXX</div>
+        <div class='box'>查詢起月：XXXXXXX</div>
+        <div class='box'>查詢止月：XXXXXXX</div>
+        <div class='box2'>
+            <div class='box2-in'>本次查詢總筆數：22筆</div>
+            <div class='box2-in'>訂單總金額：10000</div>
+        </div>
+        <div class='table'>
+            <table border='1'>
+                <tr>
+                    <th>訂單日期</th>
+                    <th>訂單編號</th>
+                    <th>商品總金額</th>
+                    <th>商品折扣</th>
+                    <th>會員折扣</th>
+                    <th>訂單金額</th>
+                    <th>付款方式</th>
+                    <th>訂單備註</th>
+                </tr>
+                <tr v-for="(list, index) in tdArray" :key="index">
+                    <td>{{list.date}}</td>
+                    <td>{{list.no}}</td>
+                    <td>{{list.price}}</td>
+                    <td>{{list.off}}</td>
+                    <td>{{list.memberOff}}</td>
+                    <td>{{list.order}}</td>
+                    <td>{{list.method}}</td>
+                    <td>{{list.other}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

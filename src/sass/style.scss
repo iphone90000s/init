@@ -1,0 +1,31 @@
+#app {
+  width: 27cm;
+  height: 21cm;
+  padding: 20px;
+  display: table;
+  margin: 0 auto;
+  background-image: url("../img/logo.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  .box {
+    margin: 0 20px 20px;
+  }
+  .box2 {
+    margin: 0 50px;
+    .box2-in {
+      display: inline-block;
+      width: calc(100%/2 - 10px);
+      text-align: center;
+    }
+  }
+  .table {
+    margin: 20px 0;
+    table {
+      width: 100%; // border: 1px solid #ccc;
+      td,
+      tr {
+        text-align: center; // border: 1px solid #ccc;
+      }
+    }
+  }
+}
